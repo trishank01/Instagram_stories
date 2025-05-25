@@ -6,3 +6,13 @@
 
 }
 
+
+.rightSide{
+    width: 50vw;
+    z-index: 99;
+}
+
+.leftSide{
+    width: 50vw;
+    z-index: 99;
+}
