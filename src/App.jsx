@@ -8,13 +8,10 @@ function App() {
     <>
       <BrowserRouter>
         <div className="w-full flex justify-center">
-           <Routes>
-
-            <Route path="/" element={ <StoryList />}/>
-            <Route path="/id/:id/300/500" element={   <StoryItem/>}/>
-
-           </Routes>
-        
+          <Routes>
+            <Route path="/" element={<StoryList />} />
+            <Route path="/id/:id/300/500" element={<StoryItem />} />
+          </Routes>
         </div>
       </BrowserRouter>
     </>

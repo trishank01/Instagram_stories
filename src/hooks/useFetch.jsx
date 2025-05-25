@@ -10,7 +10,7 @@ const useFetch = (url) => {
     try {
       const response = await fetch(url);
       const ApiData = await response.json();
-      console.log(ApiData)
+      
       setData(ApiData);
       setLoading(false);
     } catch (error) {
