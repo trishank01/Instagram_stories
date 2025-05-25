@@ -1,19 +1,22 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import useFetch from "./hooks/useFetch";
+import StoryList from "./components/StoryList";
+import StoryItem from "./components/StoryItem";
 
 function App() {
-  
-  const {data} = useFetch("https://picsum.photos/v2/list")
-
-
   return (
     <>
-      <h2 className="text-blue">hello</h2>
-      {data?.map((item) => (
-        <div key={item.id}>
-          <img className="container" src={item?.download_url} alt="" />
+      <BrowserRouter>
+        <div className="w-full flex justify-center">
+           <Routes>
+
+            <Route path="/" element={ <StoryList />}/>
+            <Route path="/id/:id/300/500" element={   <StoryItem/>}/>
+
+           </Routes>
+        
         </div>
-      ))}
+      </BrowserRouter>
     </>
   );
 }
